@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BS_PublishViewController">
+            <connections>
+                <outlet property="view" destination="OtB-Td-ozz" id="BnA-r9-R87"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="OtB-Td-ozz">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareBottomBackground" translatesAutoresizingMaskIntoConstraints="NO" id="8r3-XY-Zja" userLabel="背景图片">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJc-KM-L8u" userLabel="取消按钮">
+                    <rect key="frame" x="0.0" y="540" width="600" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="TfU-z9-KFb"/>
+                    </constraints>
+                    <state key="normal" image="shareButtonCancel"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="7RX-p1-w3k"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_slogan" translatesAutoresizingMaskIntoConstraints="NO" id="5MP-eA-Zpw">
+                    <rect key="frame" x="0.0" y="80" width="600" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="K5M-9Y-6R9"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5MP-eA-Zpw" firstAttribute="top" secondItem="OtB-Td-ozz" secondAttribute="top" constant="80" id="AyK-ha-O6E"/>
+                <constraint firstItem="8r3-XY-Zja" firstAttribute="top" secondItem="OtB-Td-ozz" secondAttribute="top" id="OP7-Ow-QW1"/>
+                <constraint firstAttribute="trailing" secondItem="8r3-XY-Zja" secondAttribute="trailing" id="PyX-oi-YXa"/>
+                <constraint firstAttribute="bottom" secondItem="8r3-XY-Zja" secondAttribute="bottom" id="TLx-YP-TeY"/>
+                <constraint firstItem="5MP-eA-Zpw" firstAttribute="leading" secondItem="OtB-Td-ozz" secondAttribute="leading" id="Uzn-o2-Rvh"/>
+                <constraint firstAttribute="bottom" secondItem="GJc-KM-L8u" secondAttribute="bottom" constant="20" id="Xkj-jr-zyv"/>
+                <constraint firstAttribute="trailing" secondItem="5MP-eA-Zpw" secondAttribute="trailing" id="eS9-vU-lS6"/>
+                <constraint firstItem="8r3-XY-Zja" firstAttribute="leading" secondItem="OtB-Td-ozz" secondAttribute="leading" id="lvV-fy-3FH"/>
+                <constraint firstItem="GJc-KM-L8u" firstAttribute="leading" secondItem="OtB-Td-ozz" secondAttribute="leading" id="oYm-sI-Bqg"/>
+                <constraint firstAttribute="trailing" secondItem="GJc-KM-L8u" secondAttribute="trailing" id="rY4-Ly-YRR"/>
+            </constraints>
+            <point key="canvasLocation" x="706" y="224"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_slogan" width="202" height="20"/>
+        <image name="shareBottomBackground" width="320" height="343"/>
+        <image name="shareButtonCancel" width="289" height="40"/>
+    </resources>
+</document>

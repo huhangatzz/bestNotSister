@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BS_PersonWebViewController">
+            <connections>
+                <outlet property="goBackItem" destination="hkE-dx-a2y" id="w3h-Cg-oZ1"/>
+                <outlet property="goForwardItem" destination="j5H-Sl-rAe" id="OCg-8i-oxv"/>
+                <outlet property="progressView" destination="D4G-Ps-EHj" id="xZp-k0-mIv"/>
+                <outlet property="view" destination="iN0-l3-epB" id="LQg-sy-TLe"/>
+                <outlet property="webView" destination="wie-kE-pno" id="lfk-9I-YLq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wie-kE-pno">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgQ-Q7-wHj">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="v69-Gv-dOe"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem enabled="NO" title="←" id="hkE-dx-a2y" userLabel="Go Back Item">
+                            <connections>
+                                <action selector="goBackAction:" destination="-1" id="Bfm-ba-FFn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem enabled="NO" title="→" id="j5H-Sl-rAe" userLabel="Go Forward Item">
+                            <connections>
+                                <action selector="goForwardAction:" destination="-1" id="rsv-c5-kjT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="jLy-R0-km6"/>
+                        <barButtonItem systemItem="refresh" id="Kpp-xm-K3W" userLabel="Refresh">
+                            <connections>
+                                <action selector="refresh:" destination="-1" id="Yzt-1w-zNK"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D4G-Ps-EHj">
+                    <rect key="frame" x="0.0" y="64" width="600" height="2"/>
+                    <color key="tintColor" red="0.31825846130000002" green="0.72104365569999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="wik-lo-zZ0"/>
+                    </constraints>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wie-kE-pno" secondAttribute="trailing" id="1q7-v2-dtI"/>
+                <constraint firstItem="PgQ-Q7-wHj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="62l-bz-cTy"/>
+                <constraint firstAttribute="trailing" secondItem="PgQ-Q7-wHj" secondAttribute="trailing" id="6Rz-jG-EGz"/>
+                <constraint firstItem="PgQ-Q7-wHj" firstAttribute="top" secondItem="wie-kE-pno" secondAttribute="bottom" id="7Me-vN-frO"/>
+                <constraint firstItem="D4G-Ps-EHj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IBk-gn-qGs"/>
+                <constraint firstItem="wie-kE-pno" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KDj-rO-bb9"/>
+                <constraint firstItem="wie-kE-pno" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MxT-pb-AZl"/>
+                <constraint firstItem="D4G-Ps-EHj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="Qz1-Qg-Rfb"/>
+                <constraint firstAttribute="trailing" secondItem="D4G-Ps-EHj" secondAttribute="trailing" id="i4H-pQ-vm1"/>
+                <constraint firstAttribute="bottom" secondItem="PgQ-Q7-wHj" secondAttribute="bottom" id="xsA-m9-q8G"/>
+            </constraints>
+            <point key="canvasLocation" x="397" y="406"/>
+        </view>
+    </objects>
+</document>

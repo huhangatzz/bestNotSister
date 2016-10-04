@@ -1,0 +1,50 @@
+//
+//  BS_PrefixHeader.pch
+//  BestNotSister
+//
+//  Created by huhang on 16/3/16.
+//  Copyright © 2016年 huhang. All rights reserved.
+//
+
+#ifndef BS_PrefixHeader_pch
+#define BS_PrefixHeader_pch
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+//延展
+#import "UIView+BSExtension.h"
+#import "UIBarButtonItem+BSBarButton.h"
+#import "NSDate+BSExtension.h"
+#import "UIImage+Extension.h"
+#import "UIColor+Extension.h"
+#import "UIImageView+BSExtension.h"
+
+//枚举
+#import "BS_Typedef.h"
+
+//类
+#import "content.h"
+#import "AFNetworking.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+
+#import "BS_HttpTools.h"
+
+#ifdef DEBUG 
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+
+#define BSLogFunc NSLog(@"%s",__func__)
+
+#define BSRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define BSTableViewBaceground BSRGBColor(223, 223, 223)
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#endif /* BS_PrefixHeader_pch */
